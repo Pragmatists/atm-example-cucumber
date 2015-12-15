@@ -1,0 +1,14 @@
+package pl.pragmatists.atm;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        plugin = {"html:target/cucumber-html-report"},
+        strict = true,
+        tags = {})
+public class RunCukesTest {
+
+}
