@@ -2,7 +2,7 @@ package pl.pragmatists.atm.support.dsl;
 
 import pl.pragmatists.atm.domain.Teller;
 
-public class TellerDomainInterface {
+public class TellerDomainInterface implements TellerInterface {
     private Teller teller;
 
     private AccountDomainInterface accountDomainInterface;
@@ -12,6 +12,7 @@ public class TellerDomainInterface {
         this.accountDomainInterface = accountDomainInterface;
     }
 
+    @Override
     public void iWithdraw(int amount) {
         teller.authenticateAs(accountDomainInterface.getDefaultAccount());
         teller.withdraw(amount);
