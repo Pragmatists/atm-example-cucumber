@@ -7,6 +7,6 @@ import pl.pragmatists.atm.support.CukesSpringConfiguration;
 
 @ContextConfiguration(classes = CukesSpringConfiguration.class, loader = SpringApplicationContextLoader.class)
 @WebAppConfiguration
-public class AccountSteps {
+public class CashDispenserSteps {
 
 }
