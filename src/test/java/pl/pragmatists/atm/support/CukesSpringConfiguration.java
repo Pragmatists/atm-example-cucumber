@@ -2,6 +2,7 @@ package pl.pragmatists.atm.support;
 
 import org.mockito.Mockito;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import pl.pragmatists.atm.domain.AutomatedTeller;
@@ -11,10 +12,12 @@ import pl.pragmatists.atm.domain.Teller;
 import pl.pragmatists.atm.service.AccountRepository;
 import pl.pragmatists.atm.service.CardReader;
 import pl.pragmatists.atm.support.dsl.AccountDomainInterface;
-import pl.pragmatists.atm.support.dsl.AtmDomainInterface;
+import pl.pragmatists.atm.support.dsl.CashDispenserDomainInterface;
+import pl.pragmatists.atm.support.dsl.DisplayDomainInterface;
 import pl.pragmatists.atm.support.dsl.TellerDomainInterface;
 
 @Configuration
+@ComponentScan(basePackages = {"pl.pragmatists.atm.cukes"})
 public class CukesSpringConfiguration {
 
     @Bean
@@ -61,7 +64,19 @@ public class CukesSpringConfiguration {
 
     @Bean
     @Scope("cucumber-glue")
-    public AtmDomainInterface atmDomainInterface(CashDispenser cashDispenser) {
-        return new AtmDomainInterface(cashDispenser);
+    public CashDispenserDomainInterface atmDomainInterface(CashDispenser cashDispenser) {
+        return new CashDispenserDomainInterface(cashDispenser);
+    }
+
+    @Bean
+    @Scope("cucumber-glue")
+    public Display display() {
+        return Mockito.mock(Display.class);
+    }
+
+    @Bean
+    @Scope("cucumber-glue")
+    public DisplayDomainInterface displayDomainInterface(Display display) {
+        return new DisplayDomainInterface(display);
     }
 }
