@@ -88,17 +88,12 @@ public class CukesSpringConfiguration {
 
     @Bean
     @Scope("cucumber-glue")
-    public TellerInterface tellerInterface(Teller teller, AccountDomainInterface accountDomainInterface, WebDriver driver) {
+    public TellerInterface tellerInterface(Teller teller, AccountDomainInterface accountDomainInterface) {
         if (asList(env.getActiveProfiles()).contains(SELENIUM_PROFILE_NAME)) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("chromedriver", "missing"));
-            return new TellerWebInterface(driver);
+            return new TellerWebInterface(new ChromeDriver());
         } else {
             return new TellerDomainInterface(teller, accountDomainInterface);
         }
-    }
-
-    @Bean
-    public WebDriver driver() {
-        return new ChromeDriver();
     }
 }
