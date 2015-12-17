@@ -18,9 +18,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <cucumber.version>1.2.0</cucumber.version>
+        <cucumber.version>1.2.4</cucumber.version>
         <assertj-core.version>3.2.0</assertj-core.version>
         <selenium-java.version>2.48.2</selenium-java.version>
+        <junit.version>4.12</junit.version>
     </properties>
 
     <build>
@@ -66,17 +67,22 @@
         </dependency>
 
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>${selenium-java.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
 
         <!-- TESTS -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>${selenium-java.version}</version>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>

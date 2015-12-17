@@ -10,5 +10,5 @@ Potrzeba biznesowa: Użytkownik może wypłacić pieniądze z bankomatu
     I stan konta powinien wynosić <saldo_po_wypłacie> zł
 
     Przykłady:
-    | stan_początkowy    | wypłacana_kwota | saldo_po_wypłacie | otrzymane_pieniądze |
-    | 206,72             | 100             | 106,72            | 100                 |
+      | stan_początkowy | wypłacana_kwota | saldo_po_wypłacie | otrzymane_pieniądze |
+      | 206             | 100             | 106               | 100                 |
