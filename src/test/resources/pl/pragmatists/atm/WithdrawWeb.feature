@@ -1,6 +1,6 @@
 #language: pl
 @web
-Potrzeba biznesowa: : Użytkownik może wypłacić pieniądze z bankomatu
+Potrzeba biznesowa: Użytkownik może wypłacić pieniądze z bankomatu
   Użytkownik może wypłacić pieniądze zdeponowane na swoim koncie w bankomacie.
 
   Szablon scenariusza: Użytkownik wypłaca <wypłacana_kwota> bankomatu przy saldzie początkowym <stan_początkowy>
