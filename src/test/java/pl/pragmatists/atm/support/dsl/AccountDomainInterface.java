@@ -26,6 +26,7 @@ public class AccountDomainInterface {
     public void accountHasBeenCreditedWith(int amount) {
         Account account = accountRepository.create(DEFAULT_ACCOUNT_NUMBER);
         account.credit(amount);
+        teller.authenticateAs(account);
     }
 
     public void assertAccountBalance(int balance) {
