@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = {"pl.pragmatists.atm.controllers", "pl.pragmatists.atm.service"})
+@ComponentScan(basePackages = {"pl.pragmatists.atm.app", "pl.pragmatists.atm.controllers", "pl.pragmatists.atm.service"})
 @EnableAutoConfiguration
 public class Application {
 

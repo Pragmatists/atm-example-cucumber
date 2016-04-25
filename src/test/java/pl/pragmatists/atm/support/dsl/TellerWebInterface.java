@@ -6,10 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TellerWebInterface implements TellerInterface {
+    
     private WebDriver driver;
 
     public TellerWebInterface(WebDriver driver) {
-
         this.driver = driver;
     }
 

@@ -5,6 +5,7 @@ import pl.pragmatists.atm.domain.Display;
 import static org.mockito.Mockito.verify;
 
 public class DisplayDomainInterface {
+    
     private Display display;
 
     public DisplayDomainInterface(Display display) {

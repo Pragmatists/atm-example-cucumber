@@ -1,5 +1,5 @@
 #language: pl
-@web
+@web @mock
 Potrzeba biznesowa: Użytkownik może wypłacić pieniądze z bankomatu
   Użytkownik może wypłacić pieniądze zdeponowane na swoim koncie w bankomacie.
 

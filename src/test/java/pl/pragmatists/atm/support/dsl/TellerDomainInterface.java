@@ -3,8 +3,8 @@ package pl.pragmatists.atm.support.dsl;
 import pl.pragmatists.atm.domain.Teller;
 
 public class TellerDomainInterface implements TellerInterface {
+    
     private Teller teller;
-
     private AccountDomainInterface accountDomainInterface;
 
     public TellerDomainInterface(Teller teller, AccountDomainInterface accountDomainInterface) {

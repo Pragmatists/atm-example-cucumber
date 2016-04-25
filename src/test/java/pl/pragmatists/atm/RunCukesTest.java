@@ -10,8 +10,7 @@ import cucumber.api.junit.Cucumber;
         plugin = {"html:target/cucumber-html-report"},
         glue = {"cucumber.api.spring", "cucumber.runtime.java.spring", "pl.pragmatists.atm"},
         strict = true,
-        monochrome = true,
-        tags = {"@web"})
+        monochrome = true)
 public class RunCukesTest {
 
 }
